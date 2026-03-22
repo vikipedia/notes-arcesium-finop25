@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>19&nbsp; Module 3 - Day 2 – Arcesium Finop Python Training</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../live-notes/module3-day3.html" rel="next">
+<link href="../live-notes/module3-day1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-04295613e3b07e36fbcf19b944d41447.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../live-notes/index.html">Live Notes</a></li><li class="breadcrumb-item"><a href="../live-notes/module3-day2.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Module 3 - Day 2</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Arcesium Finop Python Training</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction To Python Programming</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Functions and Methods</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conditions and Loops</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modules and Scripts</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../comprehensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Iterations and List comprehensions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../live-notes/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Live Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Module1 - Day1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Module 1 - Day 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Module 1 - Day 3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Module 1 - Day 4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Module 1 - Day 5</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/nurturing-session1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Nurturing Session I</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Module 2 - Day 1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Module 2 - Day 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Module 2 - Day 3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Module 2 - Day 4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Module 2 - Day 5</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/nurturing-session2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Nurturing Session II</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Module 3 - Day 1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Module 3 - Day 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Module 3 - Day 3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Module 3 - Day 4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Module 3 - Day 5</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/nurturing-session3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Nurturing Session 3</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook-date.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Working with Dates</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook-tabulate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Printing Tables with Tabulate</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook-typer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Building cmd applications with typer</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../training-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Training Setup</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#virtual-environment" id="toc-virtual-environment" class="nav-link active" data-scroll-target="#virtual-environment"><span class="header-section-number">19.1</span> Virtual Environment</a>
+  <ul class="collapse">
+  <li><a href="#conflicting-requirements" id="toc-conflicting-requirements" class="nav-link" data-scroll-target="#conflicting-requirements"><span class="header-section-number">19.1.1</span> Conflicting Requirements</a></li>
+  <li><a href="#creating-env" id="toc-creating-env" class="nav-link" data-scroll-target="#creating-env"><span class="header-section-number">19.1.2</span> creating env</a></li>
+  <li><a href="#installing-packages-in-virtual-environment" id="toc-installing-packages-in-virtual-environment" class="nav-link" data-scroll-target="#installing-packages-in-virtual-environment"><span class="header-section-number">19.1.3</span> Installing packages in virtual environment</a></li>
+  <li><a href="#requirements.txt" id="toc-requirements.txt" class="nav-link" data-scroll-target="#requirements.txt"><span class="header-section-number">19.1.4</span> requirements.txt</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary"><span class="header-section-number">19.1.5</span> Summary</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../live-notes/index.html">Live Notes</a></li><li class="breadcrumb-item"><a href="../live-notes/module3-day2.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Module 3 - Day 2</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Module 3 - Day 2</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Topics</strong></p>
+<ul>
+<li>Using third party libraries (installing, accessing , managing etc.)</li>
+<li>Managing virtual environments</li>
+</ul>
+<section id="virtual-environment" class="level2" data-number="19.1">
+<h2 data-number="19.1" class="anchored" data-anchor-id="virtual-environment"><span class="header-section-number">19.1</span> Virtual Environment</h2>
+<p>Many times it happens that different projects have requirements of python packages such that they conflict each other. In such cases how do you work on two different project on same machine? If we install python packages for one project, those packages will confict with other projects. Virtual environment is there to help us. Virtual environment allows us to have set of python packages seperately for each project. Also added advantage is, it won’t affect system python’s packages. The way to handle this is with help of <code>venv</code> module we create virtual environment for each project. All requirements for the proejct are installed in the virtual environment and not in system python’s packages. Let’s take some examples.</p>
+<section id="conflicting-requirements" class="level3" data-number="19.1.1">
+<h3 data-number="19.1.1" class="anchored" data-anchor-id="conflicting-requirements"><span class="header-section-number">19.1.1</span> Conflicting Requirements</h3>
+<p>Suppose we have two projects, <code>datascraping</code> and <code>analytics</code>. For <code>datascraping</code> project requirements are following packages::</p>
+<p>requests==2.24.0 openpyxl==2.4.8</p>
+<p>and <code>analytics</code> project needs following packages::</p>
+<p>pandas==1.1.2 openpyxl==3.0.5 requests==2.24.0</p>
+<p>Now here is confiliting requirement, one project needs openpyxl verson 2.4.8 and other needs 3.0.5.</p>
+</section>
+<section id="creating-env" class="level3" data-number="19.1.2">
+<h3 data-number="19.1.2" class="anchored" data-anchor-id="creating-env"><span class="header-section-number">19.1.2</span> creating env</h3>
+<p>To create virutal environment on your system, what you need is python version &gt; 3.5. Python comes with a package called venv (virtual environment). For older python, virtualenv was seperate application. We are going to work with virtual environment that comes with python 3. Easy steps to work with it are as given below. Open up terminal on linux/mac or cmd terminal on windows. on the prompt type following command to create virtual environment with name <code>env1</code>::</p>
+<pre><code>  python -m venv env1</code></pre>
+<p>This will create a folder with name env1 in the current directory. On linux it will have following contents::</p>
+<pre><code>  +-env1
+    |
+    +-bin
+    +-include
+    +-lib
+    +-lib64
+    +-pyenv.cfg</code></pre>
+<p>on windows system it will have following contents::</p>
+<pre><code>  +-env1
+    |
+    +-Include
+    +-Lib
+    +-Scripts
+    +-pyenv.cfg</code></pre>
+<p>To activate virtual environment on linux run following command on terminal.::</p>
+<pre><code>  bash$ source env1/bin/activate
+  (env1) bash$ # you can see the env1 environment activated as change in prompt</code></pre>
+<p>To activate virtual environment on windows run following command on windows cmd terminal::</p>
+<pre><code>  C:\Users\vik&gt; env1\bin\activate.bat
+  (env1) C:\Users\vik&gt;</code></pre>
+</section>
+<section id="installing-packages-in-virtual-environment" class="level3" data-number="19.1.3">
+<h3 data-number="19.1.3" class="anchored" data-anchor-id="installing-packages-in-virtual-environment"><span class="header-section-number">19.1.3</span> Installing packages in virtual environment</h3>
+<p>Once the virtul environment is created and activated, we are ready to use it. To install packages in this active virtual environment use <code>pip install</code>::</p>
+<pre><code>  pip install typer
+  Collecting typer
+    Using cached https://files.pythonhosted.org/packages/90/34/d138832f6945432c638f32137e6c79a3b682f06a63c488dcfaca6b166c64/typer-0.3.2-py3-none-any.whl
+  Collecting click&lt;7.2.0,&gt;=7.1.1 (from typer)
+    Using cached https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl
+  Installing collected packages: click, typer
+  Successfully installed click-7.1.2 typer-0.3.2</code></pre>
+<p>to check packages installed ::</p>
+<pre><code>  pip list
+  Package    Version
+  ---------- -------
+  click      7.1.2
+  pip        19.2.3
+  setuptools 41.2.0
+  typer      0.3.2</code></pre>
+</section>
+<section id="requirements.txt" class="level3" data-number="19.1.4">
+<h3 data-number="19.1.4" class="anchored" data-anchor-id="requirements.txt"><span class="header-section-number">19.1.4</span> requirements.txt</h3>
+<p>If we want to replicate exact same virtual environment on other machine we need list of packages that pip can understand. The format is called as requirements file. it can be generated using::</p>
+<pre><code>  pip freeze
+  click==7.1.2
+  typer==0.3.2</code></pre>
+<p>The output can be saved to a file with name requirements.txt. This file can be used in other virtual env to recreate the same environment. For example, lets make use of above requirements to recreate another environment with name <code>env1copy</code>::</p>
+<pre><code>  bash$ python -m venv env1copy
+  bash$ source env1copy/bin/activate
+  (env1copy) bash$ pip install -r requirements.txt
+  Collecting click==7.1.2 (from -r env1/requirements.txt (line 1))
+    Using cached https://files.pythonhosted.org/packages/d2/3d/fa76db83bf75c4f8d338c2fd15c8d33fdd7ad23a9b5e57eb6c5de26b430e/click-7.1.2-py2.py3-none-any.whl
+  Collecting typer==0.3.2 (from -r env1/requirements.txt (line 2))
+    Using cached https://files.pythonhosted.org/packages/90/34/d138832f6945432c638f32137e6c79a3b682f06a63c488dcfaca6b166c64/typer-0.3.2-py3-none-any.whl
+  Installing collected packages: click, typer
+  Successfully installed click-7.1.2 typer-0.3.2</code></pre>
+<p>you can check the packages installed::</p>
+<pre><code>  pip freeze
+  click==7.1.2
+  typer==0.3.2</code></pre>
+</section>
+<section id="summary" class="level3" data-number="19.1.5">
+<h3 data-number="19.1.5" class="anchored" data-anchor-id="summary"><span class="header-section-number">19.1.5</span> Summary</h3>
+<ol type="1">
+<li>Virtual environment can be created by any user. No admin privileges required.</li>
+<li>Every virtual environment is stored in seperate folder.</li>
+<li>Packages installed in a virtual environment are only in that particular virtual environment.</li>
+<li>With requirements.txt it is very easy to recreate the same replica of a particular virtul environment.</li>
+</ol>
+<div id="b77ede9e-949d-4100-a4a6-dee1b2e3670b" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install jupyterlab pandas xlsxwriter lxml requests typer</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: jupyterlab in /opt/tljh/user/lib/python3.12/site-packages (4.5.0)
+Requirement already satisfied: pandas in /opt/tljh/user/lib/python3.12/site-packages (2.3.3)
+Requirement already satisfied: xlsxwriter in /opt/tljh/user/lib/python3.12/site-packages (3.2.9)
+Requirement already satisfied: lxml in /opt/tljh/user/lib/python3.12/site-packages (6.0.2)
+Requirement already satisfied: requests in /opt/tljh/user/lib/python3.12/site-packages (2.32.3)
+Requirement already satisfied: typer in /home/jupyter-vikrant/.local/lib/python3.12/site-packages (0.20.0)
+Requirement already satisfied: async-lru&gt;=1.0.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (2.0.5)
+Requirement already satisfied: httpx&lt;1,&gt;=0.25.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (0.28.1)
+Requirement already satisfied: ipykernel!=6.30.0,&gt;=6.5.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (7.1.0)
+Requirement already satisfied: jinja2&gt;=3.0.3 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (3.1.6)
+Requirement already satisfied: jupyter-core in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (5.9.1)
+Requirement already satisfied: jupyter-lsp&gt;=2.0.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (2.3.0)
+Requirement already satisfied: jupyter-server&lt;3,&gt;=2.4.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (2.17.0)
+Requirement already satisfied: jupyterlab-server&lt;3,&gt;=2.28.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (2.28.0)
+Requirement already satisfied: notebook-shim&gt;=0.2 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (0.2.4)
+Requirement already satisfied: packaging in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (24.1)
+Requirement already satisfied: setuptools&gt;=41.1.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (74.1.2)
+Requirement already satisfied: tornado&gt;=6.2.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (6.5.2)
+Requirement already satisfied: traitlets in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab) (5.14.3)
+Requirement already satisfied: numpy&gt;=1.26.0 in /opt/tljh/user/lib/python3.12/site-packages (from pandas) (2.3.5)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/tljh/user/lib/python3.12/site-packages (from pandas) (2.9.0.post0)
+Requirement already satisfied: pytz&gt;=2020.1 in /opt/tljh/user/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /opt/tljh/user/lib/python3.12/site-packages (from pandas) (2025.2)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/tljh/user/lib/python3.12/site-packages (from requests) (3.3.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/tljh/user/lib/python3.12/site-packages (from requests) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/tljh/user/lib/python3.12/site-packages (from requests) (2.2.3)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/tljh/user/lib/python3.12/site-packages (from requests) (2025.11.12)
+Requirement already satisfied: click&gt;=8.0.0 in /home/jupyter-vikrant/.local/lib/python3.12/site-packages (from typer) (8.3.1)
+Requirement already satisfied: typing-extensions&gt;=3.7.4.3 in /opt/tljh/user/lib/python3.12/site-packages (from typer) (4.15.0)
+Requirement already satisfied: shellingham&gt;=1.3.0 in /home/jupyter-vikrant/.local/lib/python3.12/site-packages (from typer) (1.5.4)
+Requirement already satisfied: rich&gt;=10.11.0 in /home/jupyter-vikrant/.local/lib/python3.12/site-packages (from typer) (14.2.0)
+Requirement already satisfied: anyio in /opt/tljh/user/lib/python3.12/site-packages (from httpx&lt;1,&gt;=0.25.0-&gt;jupyterlab) (4.12.0)
+Requirement already satisfied: httpcore==1.* in /opt/tljh/user/lib/python3.12/site-packages (from httpx&lt;1,&gt;=0.25.0-&gt;jupyterlab) (1.0.9)
+Requirement already satisfied: h11&gt;=0.16 in /opt/tljh/user/lib/python3.12/site-packages (from httpcore==1.*-&gt;httpx&lt;1,&gt;=0.25.0-&gt;jupyterlab) (0.16.0)
+Requirement already satisfied: comm&gt;=0.1.1 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (0.2.3)
+Requirement already satisfied: debugpy&gt;=1.6.5 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (1.8.17)
+Requirement already satisfied: ipython&gt;=7.23.1 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (9.8.0)
+Requirement already satisfied: jupyter-client&gt;=8.0.0 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (8.6.3)
+Requirement already satisfied: matplotlib-inline&gt;=0.1 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (0.2.1)
+Requirement already satisfied: nest-asyncio&gt;=1.4 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (1.6.0)
+Requirement already satisfied: psutil&gt;=5.7 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (7.1.3)
+Requirement already satisfied: pyzmq&gt;=25 in /opt/tljh/user/lib/python3.12/site-packages (from ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (27.1.0)
+Requirement already satisfied: MarkupSafe&gt;=2.0 in /opt/tljh/user/lib/python3.12/site-packages (from jinja2&gt;=3.0.3-&gt;jupyterlab) (3.0.3)
+Requirement already satisfied: platformdirs&gt;=2.5 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-core-&gt;jupyterlab) (4.3.6)
+Requirement already satisfied: argon2-cffi&gt;=21.1 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (25.1.0)
+Requirement already satisfied: jupyter-events&gt;=0.11.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.12.0)
+Requirement already satisfied: jupyter-server-terminals&gt;=0.4.4 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.5.3)
+Requirement already satisfied: nbconvert&gt;=6.4.4 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (7.16.6)
+Requirement already satisfied: nbformat&gt;=5.3.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (5.10.4)
+Requirement already satisfied: prometheus-client&gt;=0.9 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.23.1)
+Requirement already satisfied: send2trash&gt;=1.8.2 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.8.3)
+Requirement already satisfied: terminado&gt;=0.8.3 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.18.1)
+Requirement already satisfied: websocket-client&gt;=1.7 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.9.0)
+Requirement already satisfied: babel&gt;=2.10 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab-server&lt;3,&gt;=2.28.0-&gt;jupyterlab) (2.17.0)
+Requirement already satisfied: json5&gt;=0.9.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab-server&lt;3,&gt;=2.28.0-&gt;jupyterlab) (0.12.1)
+Requirement already satisfied: jsonschema&gt;=4.18.0 in /opt/tljh/user/lib/python3.12/site-packages (from jupyterlab-server&lt;3,&gt;=2.28.0-&gt;jupyterlab) (4.25.1)
+Requirement already satisfied: six&gt;=1.5 in /opt/tljh/user/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas) (1.17.0)
+Requirement already satisfied: markdown-it-py&gt;=2.2.0 in /home/jupyter-vikrant/.local/lib/python3.12/site-packages (from rich&gt;=10.11.0-&gt;typer) (4.0.0)
+Requirement already satisfied: pygments&lt;3.0.0,&gt;=2.13.0 in /opt/tljh/user/lib/python3.12/site-packages (from rich&gt;=10.11.0-&gt;typer) (2.19.2)
+Requirement already satisfied: argon2-cffi-bindings in /opt/tljh/user/lib/python3.12/site-packages (from argon2-cffi&gt;=21.1-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (25.1.0)
+Requirement already satisfied: decorator&gt;=4.3.2 in /opt/tljh/user/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers&gt;=1.0.0 in /opt/tljh/user/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (1.1.1)
+Requirement already satisfied: jedi&gt;=0.18.1 in /opt/tljh/user/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (0.19.2)
+Requirement already satisfied: pexpect&gt;4.3 in /opt/tljh/user/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (4.9.0)
+Requirement already satisfied: prompt_toolkit&lt;3.1.0,&gt;=3.0.41 in /opt/tljh/user/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (3.0.52)
+Requirement already satisfied: stack_data&gt;=0.6.0 in /opt/tljh/user/lib/python3.12/site-packages (from ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (0.6.3)
+Requirement already satisfied: attrs&gt;=22.2.0 in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.28.0-&gt;jupyterlab) (25.4.0)
+Requirement already satisfied: jsonschema-specifications&gt;=2023.03.6 in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.28.0-&gt;jupyterlab) (2025.9.1)
+Requirement already satisfied: referencing&gt;=0.28.4 in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.28.0-&gt;jupyterlab) (0.37.0)
+Requirement already satisfied: rpds-py&gt;=0.7.1 in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema&gt;=4.18.0-&gt;jupyterlab-server&lt;3,&gt;=2.28.0-&gt;jupyterlab) (0.30.0)
+Requirement already satisfied: python-json-logger&gt;=2.0.4 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (4.0.0)
+Requirement already satisfied: pyyaml&gt;=5.3 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (6.0.3)
+Requirement already satisfied: rfc3339-validator in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.1.4)
+Requirement already satisfied: rfc3986-validator&gt;=0.1.1 in /opt/tljh/user/lib/python3.12/site-packages (from jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.1.1)
+Requirement already satisfied: mdurl~=0.1 in /home/jupyter-vikrant/.local/lib/python3.12/site-packages (from markdown-it-py&gt;=2.2.0-&gt;rich&gt;=10.11.0-&gt;typer) (0.1.2)
+Requirement already satisfied: beautifulsoup4 in /opt/tljh/user/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (4.14.3)
+Requirement already satisfied: bleach!=5.0.0 in /opt/tljh/user/lib/python3.12/site-packages (from bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (6.3.0)
+Requirement already satisfied: defusedxml in /opt/tljh/user/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.7.1)
+Requirement already satisfied: jupyterlab-pygments in /opt/tljh/user/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.3.0)
+Requirement already satisfied: mistune&lt;4,&gt;=2.0.3 in /opt/tljh/user/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (3.1.4)
+Requirement already satisfied: nbclient&gt;=0.5.0 in /opt/tljh/user/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.10.2)
+Requirement already satisfied: pandocfilters&gt;=1.4.1 in /opt/tljh/user/lib/python3.12/site-packages (from nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.5.1)
+Requirement already satisfied: fastjsonschema&gt;=2.15 in /opt/tljh/user/lib/python3.12/site-packages (from nbformat&gt;=5.3.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (2.21.2)
+Requirement already satisfied: ptyprocess in /opt/tljh/user/lib/python3.12/site-packages (from terminado&gt;=0.8.3-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.7.0)
+Requirement already satisfied: webencodings in /opt/tljh/user/lib/python3.12/site-packages (from bleach!=5.0.0-&gt;bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (0.5.1)
+Requirement already satisfied: tinycss2&lt;1.5,&gt;=1.1.0 in /opt/tljh/user/lib/python3.12/site-packages (from bleach[css]!=5.0.0-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.4.0)
+Requirement already satisfied: parso&lt;0.9.0,&gt;=0.8.4 in /opt/tljh/user/lib/python3.12/site-packages (from jedi&gt;=0.18.1-&gt;ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (0.8.5)
+Requirement already satisfied: fqdn in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.5.1)
+Requirement already satisfied: isoduration in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (20.11.0)
+Requirement already satisfied: jsonpointer&gt;1.13 in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (3.0.0)
+Requirement already satisfied: rfc3987-syntax&gt;=1.1.0 in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.1.0)
+Requirement already satisfied: uri-template in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.3.0)
+Requirement already satisfied: webcolors&gt;=24.6.0 in /opt/tljh/user/lib/python3.12/site-packages (from jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (25.10.0)
+Requirement already satisfied: wcwidth in /opt/tljh/user/lib/python3.12/site-packages (from prompt_toolkit&lt;3.1.0,&gt;=3.0.41-&gt;ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (0.2.14)
+Requirement already satisfied: executing&gt;=1.2.0 in /opt/tljh/user/lib/python3.12/site-packages (from stack_data&gt;=0.6.0-&gt;ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (2.2.1)
+Requirement already satisfied: asttokens&gt;=2.1.0 in /opt/tljh/user/lib/python3.12/site-packages (from stack_data&gt;=0.6.0-&gt;ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (3.0.1)
+Requirement already satisfied: pure-eval in /opt/tljh/user/lib/python3.12/site-packages (from stack_data&gt;=0.6.0-&gt;ipython&gt;=7.23.1-&gt;ipykernel!=6.30.0,&gt;=6.5.0-&gt;jupyterlab) (0.2.3)
+Requirement already satisfied: cffi&gt;=1.0.1 in /opt/tljh/user/lib/python3.12/site-packages (from argon2-cffi-bindings-&gt;argon2-cffi&gt;=21.1-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (2.0.0)
+Requirement already satisfied: soupsieve&gt;=1.6.1 in /opt/tljh/user/lib/python3.12/site-packages (from beautifulsoup4-&gt;nbconvert&gt;=6.4.4-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (2.8)
+Requirement already satisfied: pycparser in /opt/tljh/user/lib/python3.12/site-packages (from cffi&gt;=1.0.1-&gt;argon2-cffi-bindings-&gt;argon2-cffi&gt;=21.1-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (2.22)
+Requirement already satisfied: lark&gt;=1.2.2 in /opt/tljh/user/lib/python3.12/site-packages (from rfc3987-syntax&gt;=1.1.0-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.3.1)
+Requirement already satisfied: arrow&gt;=0.15.0 in /opt/tljh/user/lib/python3.12/site-packages (from isoduration-&gt;jsonschema[format-nongpl]&gt;=4.18.0-&gt;jupyter-events&gt;=0.11.0-&gt;jupyter-server&lt;3,&gt;=2.4.0-&gt;jupyterlab) (1.4.0)</code></pre>
+</div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../live-notes/module3-day1.html" class="pagination-link" aria-label="Module 3 - Day 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Module 3 - Day 1</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../live-notes/module3-day3.html" class="pagination-link" aria-label="Module 3 - Day 3">
+        <span class="nav-page-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Module 3 - Day 3</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

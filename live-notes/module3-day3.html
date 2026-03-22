@@ -1,0 +1,1685 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>20&nbsp; Module 3 - Day 3 – Arcesium Finop Python Training</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../live-notes/module3-day4.html" rel="next">
+<link href="../live-notes/module3-day2.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-04295613e3b07e36fbcf19b944d41447.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../live-notes/index.html">Live Notes</a></li><li class="breadcrumb-item"><a href="../live-notes/module3-day3.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Module 3 - Day 3</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">Arcesium Finop Python Training</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../syllabus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Syllabus</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction To Python Programming</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Functions and Methods</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../loops.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Conditions and Loops</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../modules.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Modules and Scripts</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../comprehensions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Iterations and List comprehensions</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../live-notes/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Live Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Module1 - Day1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Module 1 - Day 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Module 1 - Day 3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Module 1 - Day 4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module1-day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Module 1 - Day 5</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/nurturing-session1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Nurturing Session I</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Module 2 - Day 1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Module 2 - Day 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Module 2 - Day 3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Module 2 - Day 4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module2-day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Module 2 - Day 5</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/nurturing-session2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Nurturing Session II</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Module 3 - Day 1</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Module 3 - Day 2</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Module 3 - Day 3</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Module 3 - Day 4</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/module3-day5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Module 3 - Day 5</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../live-notes/nurturing-session3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Nurturing Session 3</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook-date.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Working with Dates</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook-tabulate.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Printing Tables with Tabulate</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cookbook-typer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">Building cmd applications with typer</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../training-setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Training Setup</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#http-protocol" id="toc-http-protocol" class="nav-link active" data-scroll-target="#http-protocol"><span class="header-section-number">20.1</span> HTTP protocol</a></li>
+  <li><a href="#working-with-http-from-python" id="toc-working-with-http-from-python" class="nav-link" data-scroll-target="#working-with-http-from-python"><span class="header-section-number">20.2</span> Working with HTTP from python</a></li>
+  <li><a href="#parameters-of-get-request" id="toc-parameters-of-get-request" class="nav-link" data-scroll-target="#parameters-of-get-request"><span class="header-section-number">20.3</span> parameters of get request</a></li>
+  <li><a href="#web-api" id="toc-web-api" class="nav-link" data-scroll-target="#web-api"><span class="header-section-number">20.4</span> Web api</a></li>
+  <li><a href="#authentication" id="toc-authentication" class="nav-link" data-scroll-target="#authentication"><span class="header-section-number">20.5</span> Authentication</a></li>
+  <li><a href="#json" id="toc-json" class="nav-link" data-scroll-target="#json"><span class="header-section-number">20.6</span> json</a></li>
+  <li><a href="#library-based-example-which-works-with-data-from-internet" id="toc-library-based-example-which-works-with-data-from-internet" class="nav-link" data-scroll-target="#library-based-example-which-works-with-data-from-internet"><span class="header-section-number">20.7</span> Library based example which works with data from internet</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../live-notes/index.html">Live Notes</a></li><li class="breadcrumb-item"><a href="../live-notes/module3-day3.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Module 3 - Day 3</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Module 3 - Day 3</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Topics</strong></p>
+<ul>
+<li>Fetching data from internet/intranet</li>
+<li>With requests module get/post APIs</li>
+<li>Operating with json data</li>
+<li>json to python data</li>
+<li>python to json data</li>
+<li>examples</li>
+</ul>
+<p>For today’s practice make use of notebook <code>module3-day3.ipynb</code> created in your enviroment. Shut down kernel for all previous notebooks (if in runing condition) by right cliking on notbeook on left hand side file browser</p>
+<section id="http-protocol" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="http-protocol"><span class="header-section-number">20.1</span> HTTP protocol</h2>
+<p>Have a look at this url</p>
+<p>https://finop-25.arcesium.vikrant.dev/live-notes/module3-day3.html</p>
+<p>https: -&gt; name of protocol .. use secured http for this transaction finop-25.arcesium.vikrant.dev -&gt; host name.. name of the remote machine on which the server is running live-notes/module3-day3.html -&gt; path of file on the server</p>
+<p>HTTP gives us ways to manage remote resources on the webserver</p>
+<p>There are four methods in HTTP:</p>
+<ul>
+<li>get - gets the remote resouce as requsted by the client (firefox/chrome/program)</li>
+<li>post - this allows to take some hidden parameter from client and according act on the server, if required it will also reponse back</li>
+<li>put - put given resource on the server</li>
+<li>delete - delete a resource from the server</li>
+</ul>
+</section>
+<section id="working-with-http-from-python" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="working-with-http-from-python"><span class="header-section-number">20.2</span> Working with HTTP from python</h2>
+<p>We will use a third party library called <code>requests</code> for working with http functionality</p>
+<pre><code>pip install requests</code></pre>
+<div id="82881215-a013-4b5d-b7dc-ef7c2c3a683c" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://finop-25.arcesium.vikrant.dev/live-notes/module3-day3.html"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>response  <span class="op">=</span> requests.get(url)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="791558ab-ee86-4b6e-98f5-4b7379d4b116" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>response.status_code <span class="co"># status code 200 means the request was successful</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>200</code></pre>
+</div>
+</div>
+<div id="694e697a-4fd6-42a4-af98-ac0a6a29bcc3" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#response.content # but this binary data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="4b6f108d-9fe5-4468-9aa9-f58e48e1f6c4" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(response.text[:<span class="dv">1000</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;&lt;head&gt;
+
+&lt;meta charset="utf-8"&gt;
+&lt;meta name="generator" content="quarto-1.8.26"&gt;
+
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"&gt;
+
+
+&lt;title&gt;20&amp;nbsp; Module 3 - Day 3 â Arcesium Finop Python Training&lt;/title&gt;
+&lt;style&gt;
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre &gt; code.sourceCode { white-space: pre; position: relative; }
+pre &gt; code.sourceCode &gt; span { display: inline-block; line-height: 1.2</code></pre>
+</div>
+</div>
+<div id="8344c311-41be-475a-bd4a-ba3b405e08e0" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> download_data(url, outputfile):</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Downloading ..."</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    r <span class="op">=</span> requests.get(url)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> r.status_code <span class="op">==</span> <span class="dv">200</span>:</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Writing to file </span><span class="sc">{</span>outputfile<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">with</span> <span class="bu">open</span>(outputfile, <span class="st">"wb"</span>) <span class="im">as</span> f:</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>            f.write(r.content)</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"There was an error in downloaing the file!"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="c3e4084e-0298-49d2-a404-3ea95bde58db" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>download_data(url, <span class="st">"m3d3.html"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Downloading ...
+Writing to file m3d3.html</code></pre>
+</div>
+</div>
+<p><strong>problem</strong> - Write a function <code>download_training_notes</code> which will download all live notes of this training in use secified folder.</p>
+<pre><code>download_training_notes(baseurl, outputfolder)</code></pre>
+<p>hint: observer the url pattern</p>
+<pre><code>baseurl = "https://finop-25.arcesium.vikrant.dev/"
+https://finop-25.arcesium.vikrant.dev/live-notes/module1-day1.html
+https://finop-25.arcesium.vikrant.dev/live-notes/module1-day2.html
+.
+.
+https://finop-25.arcesium.vikrant.dev/live-notes/module2-day1.html
+.
+.</code></pre>
+<div id="7c6d15e0-f0f7-4122-ab27-ea84148220d8" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>baseurl <span class="op">=</span> <span class="st">"https://finop-25.arcesium.vikrant.dev/"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>modules <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>days <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_urls_files(baseurl, modules, days):</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    urls <span class="op">=</span> {}</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> m <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, modules<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> d <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, days<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>            filename <span class="op">=</span> <span class="ss">f"module</span><span class="sc">{</span>m<span class="sc">}</span><span class="ss">-day</span><span class="sc">{</span>d<span class="sc">}</span><span class="ss">.html"</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>            urls[filename] <span class="op">=</span> (<span class="ss">f"</span><span class="sc">{</span>baseurl<span class="sc">}</span><span class="ss">/live-notes/</span><span class="sc">{</span>filename<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> urls</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> download_training_notes(baseurl, outputfolder):</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> os.path.exists(outputfolder):</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>        os.mkdir(outputfolder)</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Outputfolder already exits!"</span>)</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    urls <span class="op">=</span> generate_urls_files(baseurl, <span class="dv">2</span>, <span class="dv">5</span>)</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> filename, url <span class="kw">in</span> urls.items():</span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>        outputfile <span class="op">=</span> os.path.join(outputfolder, filename)</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>        download_data(url, outputfile)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="ea69179a-ca03-46c8-b9fb-e74d61e03518" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>baseurl <span class="op">=</span> <span class="st">"https://finop-25.arcesium.vikrant.dev/"</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>download_training_notes( baseurl, <span class="st">"downloaded_notes"</span>) </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Downloading ...
+Writing to file downloaded_notes/module1-day1.html
+Downloading ...
+Writing to file downloaded_notes/module1-day2.html
+Downloading ...
+Writing to file downloaded_notes/module1-day3.html
+Downloading ...
+Writing to file downloaded_notes/module1-day4.html
+Downloading ...
+Writing to file downloaded_notes/module1-day5.html
+Downloading ...
+Writing to file downloaded_notes/module2-day1.html
+Downloading ...
+Writing to file downloaded_notes/module2-day2.html
+Downloading ...
+Writing to file downloaded_notes/module2-day3.html
+Downloading ...
+Writing to file downloaded_notes/module2-day4.html
+Downloading ...
+Writing to file downloaded_notes/module2-day5.html</code></pre>
+</div>
+</div>
+<p><strong>index.html</strong></p>
+<p>https://finop-25.arcesium.vikrant.dev/ this means https://finop-25.arcesium.vikrant.dev/index.html</p>
+</section>
+<section id="parameters-of-get-request" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="parameters-of-get-request"><span class="header-section-number">20.3</span> parameters of get request</h2>
+<div id="d0b9a826-e62a-45c4-9724-396c7f1032f7" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>google_search <span class="op">=</span> <span class="st">"https://www.google.com/search?client=firefox-b-d&amp;q=web+api&amp;sei=VlSVadrbK4vp1e8P-ImC4Ag"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="1cd9c748-e9c0-4239-a523-f19f43441fa3" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(google_search)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="53e72652-4f9c-4f12-b178-c549e8c2d3d0" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>r.status_code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<pre><code>200</code></pre>
+</div>
+</div>
+<div id="82021c60-d489-4940-ac69-d59c836c0b13" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {<span class="st">"client"</span>:<span class="st">"python"</span>, </span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"q"</span>:<span class="st">"web api"</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"sei"</span>: <span class="st">"VlSVadrbK4vp1e"</span>}</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(<span class="st">"https://www.google.com/search"</span>,</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>             params <span class="op">=</span> params)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="bfba9ade-8780-4be6-8d4c-0af9c5e323f9" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>r.status_code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<pre><code>200</code></pre>
+</div>
+</div>
+</section>
+<section id="web-api" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="web-api"><span class="header-section-number">20.4</span> Web api</h2>
+<p>Web api documenation usually give type of request (get/post) and parameters for the get request. For example see the <a href="https://www.alphavantage.co/documentation/">API documention of alphavantange</a></p>
+<div id="d52aad51-9836-4c96-bda9-b10880ef8344" class="cell" data-execution_count="31">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://www.alphavantage.co/query"</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>API_KEY<span class="op">=</span> <span class="st">"UKVFE0JLE0TBPDEF"</span> <span class="co">#"demo"</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>params <span class="op">=</span> {</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"function"</span>: <span class="st">"TIME_SERIES_INTRADAY"</span>,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"symbol"</span>: <span class="st">"IBM"</span>,</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"interval"</span>: <span class="st">"5min"</span>,</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"apikey"</span>: API_KEY</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(url, params<span class="op">=</span>params)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="0e079631-f297-4152-8c6f-6b481772485e" class="cell" data-execution_count="32">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>r.status_code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<pre><code>200</code></pre>
+</div>
+</div>
+<div id="df9fc325-474b-4512-b77d-6cf383af9e16" class="cell" data-execution_count="33">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>r.json()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<pre><code>{'Information': 'Thank you for using Alpha Vantage! This is a premium endpoint. You may subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly unlock all premium endpoints'}</code></pre>
+</div>
+</div>
+<div id="46c00b04-7950-48cd-9655-d571741d1c8c" class="cell" data-execution_count="34">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(<span class="st">"https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&amp;symbol=IBM&amp;interval=5min&amp;apikey=demo"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="13822aaf-fcb8-4c99-923b-ba9feb9a5eb9" class="cell" data-execution_count="35">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>r.status_code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="35">
+<pre><code>200</code></pre>
+</div>
+</div>
+<div id="9cd49123-fd3f-47c5-b4a1-aefdb451e427" class="cell" data-execution_count="37">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> r.json() <span class="co"># it will actually convert the json data into python data</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="aa881e1d-9622-4477-876a-d431ddf413e4" class="cell" data-execution_count="39">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="39">
+<pre><code>dict</code></pre>
+</div>
+</div>
+<div id="739514d7-1cbf-4cdf-82fb-4bb1d906fd0f" class="cell" data-execution_count="40">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>data.keys()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="40">
+<pre><code>dict_keys(['Meta Data', 'Time Series (5min)'])</code></pre>
+</div>
+</div>
+<div id="972b7d7a-0c06-41f7-9193-579bdf76a0d8" class="cell" data-execution_count="41">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'Meta Data'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="41">
+<pre><code>{'1. Information': 'Intraday (5min) open, high, low, close prices and volume',
+ '2. Symbol': 'IBM',
+ '3. Last Refreshed': '2026-02-17 19:55:00',
+ '4. Interval': '5min',
+ '5. Output Size': 'Compact',
+ '6. Time Zone': 'US/Eastern'}</code></pre>
+</div>
+</div>
+<div id="5fc120c1-f78d-4321-ab29-ac4b9c16d724" class="cell" data-execution_count="42">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>timeseries <span class="op">=</span> data[<span class="st">'Time Series (5min)'</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="55d7076b-c4f2-4862-9e02-55fc60bfa822" class="cell" data-execution_count="45">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="45ed922a-7be0-4558-bcf4-aa8bca5d6122" class="cell" data-execution_count="47">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(timeseries)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="47">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:55:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:50:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:45:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:40:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:35:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:30:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:25:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:20:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:15:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 19:05:00</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">2026-02-17 12:20:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 12:15:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 12:10:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 12:05:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 12:00:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 11:55:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 11:50:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 11:45:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 11:40:00</th>
+<th data-quarto-table-cell-role="th">2026-02-17 11:35:00</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">1. open</th>
+<td>258.1100</td>
+<td>258.1200</td>
+<td>258.2342</td>
+<td>258.2900</td>
+<td>258.2900</td>
+<td>258.0000</td>
+<td>257.9858</td>
+<td>258.1100</td>
+<td>258.1100</td>
+<td>258.2800</td>
+<td>...</td>
+<td>258.9500</td>
+<td>259.1400</td>
+<td>259.3450</td>
+<td>259.1501</td>
+<td>258.7550</td>
+<td>258.4500</td>
+<td>258.2600</td>
+<td>258.2800</td>
+<td>258.3500</td>
+<td>258.1600</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2. high</th>
+<td>258.2800</td>
+<td>258.1200</td>
+<td>258.2342</td>
+<td>258.2900</td>
+<td>258.2900</td>
+<td>258.0000</td>
+<td>258.1000</td>
+<td>258.2198</td>
+<td>258.1100</td>
+<td>258.3100</td>
+<td>...</td>
+<td>258.9800</td>
+<td>259.4099</td>
+<td>259.4100</td>
+<td>259.5000</td>
+<td>259.3000</td>
+<td>258.7800</td>
+<td>258.5099</td>
+<td>258.4399</td>
+<td>258.6900</td>
+<td>258.6600</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">3. low</th>
+<td>257.9300</td>
+<td>257.9300</td>
+<td>258.2198</td>
+<td>258.2900</td>
+<td>258.2100</td>
+<td>258.0000</td>
+<td>257.9858</td>
+<td>258.1100</td>
+<td>258.1100</td>
+<td>258.2800</td>
+<td>...</td>
+<td>258.4800</td>
+<td>258.7700</td>
+<td>258.7200</td>
+<td>259.0000</td>
+<td>258.7500</td>
+<td>258.1950</td>
+<td>258.1050</td>
+<td>258.0800</td>
+<td>258.1310</td>
+<td>258.1300</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">4. close</th>
+<td>258.2800</td>
+<td>258.1100</td>
+<td>258.2198</td>
+<td>258.2900</td>
+<td>258.2100</td>
+<td>258.0000</td>
+<td>258.0200</td>
+<td>258.2198</td>
+<td>258.1100</td>
+<td>258.2900</td>
+<td>...</td>
+<td>258.7800</td>
+<td>258.9400</td>
+<td>259.0850</td>
+<td>259.3450</td>
+<td>259.1100</td>
+<td>258.7550</td>
+<td>258.4500</td>
+<td>258.1713</td>
+<td>258.3450</td>
+<td>258.3550</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">5. volume</th>
+<td>107</td>
+<td>52</td>
+<td>5</td>
+<td>1</td>
+<td>11</td>
+<td>1</td>
+<td>167</td>
+<td>5</td>
+<td>13</td>
+<td>1589</td>
+<td>...</td>
+<td>21880</td>
+<td>30102</td>
+<td>29146</td>
+<td>20922</td>
+<td>40331</td>
+<td>23839</td>
+<td>21569</td>
+<td>30208</td>
+<td>34714</td>
+<td>30303</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 100 columns</p>
+</div>
+</div>
+</div>
+<div id="4656a359-17b5-41e1-98c0-5204ba4ee5fd" class="cell" data-execution_count="48">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(timeseries).T</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="48">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">1. open</th>
+<th data-quarto-table-cell-role="th">2. high</th>
+<th data-quarto-table-cell-role="th">3. low</th>
+<th data-quarto-table-cell-role="th">4. close</th>
+<th data-quarto-table-cell-role="th">5. volume</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2026-02-17 19:55:00</th>
+<td>258.1100</td>
+<td>258.2800</td>
+<td>257.9300</td>
+<td>258.2800</td>
+<td>107</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2026-02-17 19:50:00</th>
+<td>258.1200</td>
+<td>258.1200</td>
+<td>257.9300</td>
+<td>258.1100</td>
+<td>52</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2026-02-17 19:45:00</th>
+<td>258.2342</td>
+<td>258.2342</td>
+<td>258.2198</td>
+<td>258.2198</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2026-02-17 19:40:00</th>
+<td>258.2900</td>
+<td>258.2900</td>
+<td>258.2900</td>
+<td>258.2900</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2026-02-17 19:35:00</th>
+<td>258.2900</td>
+<td>258.2900</td>
+<td>258.2100</td>
+<td>258.2100</td>
+<td>11</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2026-02-17 11:55:00</th>
+<td>258.4500</td>
+<td>258.7800</td>
+<td>258.1950</td>
+<td>258.7550</td>
+<td>23839</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2026-02-17 11:50:00</th>
+<td>258.2600</td>
+<td>258.5099</td>
+<td>258.1050</td>
+<td>258.4500</td>
+<td>21569</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2026-02-17 11:45:00</th>
+<td>258.2800</td>
+<td>258.4399</td>
+<td>258.0800</td>
+<td>258.1713</td>
+<td>30208</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2026-02-17 11:40:00</th>
+<td>258.3500</td>
+<td>258.6900</td>
+<td>258.1310</td>
+<td>258.3450</td>
+<td>34714</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2026-02-17 11:35:00</th>
+<td>258.1600</td>
+<td>258.6600</td>
+<td>258.1300</td>
+<td>258.3550</td>
+<td>30303</td>
+</tr>
+</tbody>
+</table>
+
+<p>100 rows × 5 columns</p>
+</div>
+</div>
+</div>
+<p>following third party modules provide access to data from internet as python library</p>
+<pre><code>! pip install yfinance 
+! pip install wbgapi</code></pre>
+</section>
+<section id="authentication" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="authentication"><span class="header-section-number">20.5</span> Authentication</h2>
+<p>Simple user password authentication</p>
+<div id="13b2f627-70f9-41a9-912f-1ee8351f1fdf" class="cell" data-execution_count="50">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>user <span class="op">=</span> <span class="st">"dummy"</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">"/tmp/password.txt"</span>) <span class="im">as</span> f:</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    password <span class="op">=</span> f.read()</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> requests.get(<span class="st">"http://api.github.com/user"</span>, auth<span class="op">=</span>(user, password))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="3cc9b612-c9da-4dcd-a614-900d2ec9f273" class="cell" data-execution_count="51">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>r.status_code</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
+<pre><code>401</code></pre>
+</div>
+</div>
+</section>
+<section id="json" class="level2" data-number="20.6">
+<h2 data-number="20.6" class="anchored" data-anchor-id="json"><span class="header-section-number">20.6</span> json</h2>
+<p>json data is nothing but if you convert python lists/dictionary combined with basic datatypes in to text</p>
+<div id="6f625ad8-3af6-4296-a9ba-f8e6c4ce31b2" class="cell" data-execution_count="52">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="73f3df9c-33b4-4b6a-81bf-63d1b9683eeb" class="cell" data-execution_count="53">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>params</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="53">
+<pre><code>{'function': 'TIME_SERIES_INTRADAY',
+ 'symbol': 'IBM',
+ 'interval': '5min',
+ 'apikey': 'UKVFE0JLE0TBPDEF'}</code></pre>
+</div>
+</div>
+<div id="3f62c4ff-51e4-425a-8647-7c75d112970b" class="cell" data-execution_count="54">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>json.dumps(params) <span class="co"># the way to convert python data into json string</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="54">
+<pre><code>'{"function": "TIME_SERIES_INTRADAY", "symbol": "IBM", "interval": "5min", "apikey": "UKVFE0JLE0TBPDEF"}'</code></pre>
+</div>
+</div>
+<div id="3482c7ba-6e37-4bc2-ae69-c618e1309ca2" class="cell" data-execution_count="55">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>pydata <span class="op">=</span> {<span class="st">"value"</span>: [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>],</span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"symbol"</span>: [<span class="st">"X"</span>,<span class="st">"Y"</span>,<span class="st">"Z"</span>,<span class="st">"A"</span>,<span class="st">"B"</span>]}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="815dbf0d-5ce4-4fb2-860d-73e8f3aadd72" class="cell" data-execution_count="56">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>json.dumps(pydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="56">
+<pre><code>'{"value": [1, 2, 3, 4, 5], "symbol": ["X", "Y", "Z", "A", "B"]}'</code></pre>
+</div>
+</div>
+<div id="4555b275-d4ac-4cbc-a54d-0dea735278ef" class="cell" data-execution_count="57">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>jsonstring <span class="op">=</span> json.dumps(pydata)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="978487d0-8ed1-4f55-9a90-f6ca66049bc4" class="cell" data-execution_count="58">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>jsonstring</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="58">
+<pre><code>'{"value": [1, 2, 3, 4, 5], "symbol": ["X", "Y", "Z", "A", "B"]}'</code></pre>
+</div>
+</div>
+<div id="e754ac28-ca39-4467-b9a7-a16f4cb5bf9f" class="cell" data-execution_count="59">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb57"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(jsonstring)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="59">
+<pre><code>str</code></pre>
+</div>
+</div>
+<div id="08d1c712-0560-4e89-866d-801e528649d2" class="cell" data-execution_count="61">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> json.loads(jsonstring)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="4ff05734-a3c6-4925-9672-dd8fdb719b7d" class="cell" data-execution_count="62">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb60"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a>d</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="62">
+<pre><code>{'value': [1, 2, 3, 4, 5], 'symbol': ['X', 'Y', 'Z', 'A', 'B']}</code></pre>
+</div>
+</div>
+<div id="0e47c77b-ebd9-4b54-a284-57b3b5e9c5ed" class="cell" data-execution_count="63">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(d)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="63">
+<pre><code>dict</code></pre>
+</div>
+</div>
+</section>
+<section id="library-based-example-which-works-with-data-from-internet" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="library-based-example-which-works-with-data-from-internet"><span class="header-section-number">20.7</span> Library based example which works with data from internet</h2>
+<div id="40fe852b-0f2a-47e9-a422-f8fc5d4876ea" class="cell" data-execution_count="64">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb64"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install yfinance</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<div class="ansi-escaped-output">
+<pre>Defaulting to user installation because normal site-packages is not writeable
+
+Collecting yfinance
+
+  Downloading yfinance-1.2.0-py2.py3-none-any.whl.metadata (6.1 kB)
+
+Requirement already satisfied: pandas&gt;=1.3.0 in /opt/tljh/user/lib/python3.12/site-packages (from yfinance) (2.3.3)
+
+Requirement already satisfied: numpy&gt;=1.16.5 in /opt/tljh/user/lib/python3.12/site-packages (from yfinance) (2.3.5)
+
+Requirement already satisfied: requests&gt;=2.31 in /opt/tljh/user/lib/python3.12/site-packages (from yfinance) (2.32.3)
+
+Collecting multitasking&gt;=0.0.7 (from yfinance)
+
+  Downloading multitasking-0.0.12.tar.gz (19 kB)
+
+  Preparing metadata (setup.py) ... done
+
+Requirement already satisfied: platformdirs&gt;=2.0.0 in /opt/tljh/user/lib/python3.12/site-packages (from yfinance) (4.3.6)
+
+Requirement already satisfied: pytz&gt;=2022.5 in /opt/tljh/user/lib/python3.12/site-packages (from yfinance) (2025.2)
+
+Requirement already satisfied: frozendict&gt;=2.3.4 in /opt/tljh/user/lib/python3.12/site-packages (from yfinance) (2.4.4)
+
+Collecting peewee&gt;=3.16.2 (from yfinance)
+
+  Downloading peewee-3.19.0-py3-none-any.whl.metadata (7.0 kB)
+
+Requirement already satisfied: beautifulsoup4&gt;=4.11.1 in /opt/tljh/user/lib/python3.12/site-packages (from yfinance) (4.14.3)
+
+Collecting curl_cffi&lt;0.14,&gt;=0.7 (from yfinance)
+
+  Downloading curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (13 kB)
+
+Collecting protobuf&gt;=3.19.0 (from yfinance)
+
+  Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+
+Collecting websockets&gt;=13.0 (from yfinance)
+
+  Downloading websockets-16.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+
+Requirement already satisfied: soupsieve&gt;=1.6.1 in /opt/tljh/user/lib/python3.12/site-packages (from beautifulsoup4&gt;=4.11.1-&gt;yfinance) (2.8)
+
+Requirement already satisfied: typing-extensions&gt;=4.0.0 in /opt/tljh/user/lib/python3.12/site-packages (from beautifulsoup4&gt;=4.11.1-&gt;yfinance) (4.15.0)
+
+Requirement already satisfied: cffi&gt;=1.12.0 in /opt/tljh/user/lib/python3.12/site-packages (from curl_cffi&lt;0.14,&gt;=0.7-&gt;yfinance) (2.0.0)
+
+Requirement already satisfied: certifi&gt;=2024.2.2 in /opt/tljh/user/lib/python3.12/site-packages (from curl_cffi&lt;0.14,&gt;=0.7-&gt;yfinance) (2025.11.12)
+
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/tljh/user/lib/python3.12/site-packages (from pandas&gt;=1.3.0-&gt;yfinance) (2.9.0.post0)
+
+Requirement already satisfied: tzdata&gt;=2022.7 in /opt/tljh/user/lib/python3.12/site-packages (from pandas&gt;=1.3.0-&gt;yfinance) (2025.2)
+
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/tljh/user/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;yfinance) (3.3.2)
+
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/tljh/user/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;yfinance) (3.10)
+
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/tljh/user/lib/python3.12/site-packages (from requests&gt;=2.31-&gt;yfinance) (2.2.3)
+
+Requirement already satisfied: pycparser in /opt/tljh/user/lib/python3.12/site-packages (from cffi&gt;=1.12.0-&gt;curl_cffi&lt;0.14,&gt;=0.7-&gt;yfinance) (2.22)
+
+Requirement already satisfied: six&gt;=1.5 in /opt/tljh/user/lib/python3.12/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.3.0-&gt;yfinance) (1.17.0)
+
+Downloading yfinance-1.2.0-py2.py3-none-any.whl (130 kB)
+
+Downloading curl_cffi-0.13.0-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.3 MB)
+
+   <span class="ansi-bright-black-fg">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class="ansi-green-fg">8.3/8.3 MB</span> <span class="ansi-red-fg">64.1 MB/s</span> eta <span class="ansi-cyan-fg">0:00:00</span>
+
+Downloading peewee-3.19.0-py3-none-any.whl (411 kB)
+
+Downloading protobuf-6.33.5-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+
+Downloading websockets-16.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (184 kB)
+
+Building wheels for collected packages: multitasking
+
+  Building wheel for multitasking (setup.py) ... done
+
+  Created wheel for multitasking: filename=multitasking-0.0.12-py3-none-any.whl size=15548 sha256=1d128fa11aafe308a1dfa192b727a107a115dd4de71a8a268a9f12f881a9e535
+
+  Stored in directory: /home/jupyter-vikrant/.cache/pip/wheels/cc/bd/6f/664d62c99327abeef7d86489e6631cbf45b56fbf7ef1d6ef00
+
+Successfully built multitasking
+
+Installing collected packages: peewee, multitasking, websockets, protobuf, curl_cffi, yfinance
+
+<span class="ansi-yellow-fg">  WARNING: The script pwiz is installed in '/home/jupyter-vikrant/.local/bin' which is not on PATH.
+
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span><span class="ansi-yellow-fg">
+
+</span><span class="ansi-yellow-fg">  WARNING: The script websockets is installed in '/home/jupyter-vikrant/.local/bin' which is not on PATH.
+
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span><span class="ansi-yellow-fg">
+
+</span><span class="ansi-yellow-fg">  WARNING: The script sample is installed in '/home/jupyter-vikrant/.local/bin' which is not on PATH.
+
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.</span><span class="ansi-yellow-fg">
+
+</span>Successfully installed curl_cffi-0.13.0 multitasking-0.0.12 peewee-3.19.0 protobuf-6.33.5 websockets-16.0 yfinance-1.2.0
+</pre>
+</div>
+</div>
+</div>
+<div id="05fc6eee-3a61-404d-8b66-1e09edf48130" class="cell" data-execution_count="65">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb65"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> yfinance <span class="im">as</span> yf</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="e5fb2773-f11a-46e0-9a68-f4abed983b5b" class="cell" data-execution_count="66">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb66"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>msft <span class="op">=</span> yf.Ticker(<span class="st">"MSFT"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="de71397e-1d9e-4473-9d2a-cc3dc79a9109" class="cell" data-execution_count="67">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> datetime</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="93b29059-8965-49ce-b3b7-ae12046ffc39" class="cell" data-execution_count="69">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb68"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a>prices <span class="op">=</span> msft.history(start<span class="op">=</span>datetime.datetime(<span class="dv">2021</span>, <span class="dv">1</span>, <span class="dv">1</span>), end<span class="op">=</span>datetime.datetime(<span class="dv">2021</span>, <span class="dv">12</span>, <span class="dv">31</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="3cbdc2bf-099c-46af-8624-4cc8b9bc6665" class="cell" data-execution_count="70">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb69"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a>prices</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="70">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Open</th>
+<th data-quarto-table-cell-role="th">High</th>
+<th data-quarto-table-cell-role="th">Low</th>
+<th data-quarto-table-cell-role="th">Close</th>
+<th data-quarto-table-cell-role="th">Volume</th>
+<th data-quarto-table-cell-role="th">Dividends</th>
+<th data-quarto-table-cell-role="th">Stock Splits</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2021-01-04 00:00:00-05:00</th>
+<td>213.526371</td>
+<td>213.977356</td>
+<td>206.118723</td>
+<td>208.882202</td>
+<td>37130100</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2021-01-05 00:00:00-05:00</th>
+<td>208.469590</td>
+<td>209.678619</td>
+<td>206.972710</td>
+<td>209.083694</td>
+<td>23823000</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2021-01-06 00:00:00-05:00</th>
+<td>203.585558</td>
+<td>207.730777</td>
+<td>203.364868</td>
+<td>203.662323</td>
+<td>35930700</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2021-01-07 00:00:00-05:00</th>
+<td>205.379873</td>
+<td>210.465436</td>
+<td>205.063237</td>
+<td>209.457916</td>
+<td>27694500</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2021-01-08 00:00:00-05:00</th>
+<td>209.832161</td>
+<td>211.655296</td>
+<td>208.248926</td>
+<td>210.734131</td>
+<td>22956200</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2021-12-23 00:00:00-05:00</th>
+<td>321.963188</td>
+<td>325.485204</td>
+<td>321.943847</td>
+<td>323.840302</td>
+<td>19617800</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2021-12-27 00:00:00-05:00</th>
+<td>324.585331</td>
+<td>331.377781</td>
+<td>324.556304</td>
+<td>331.348755</td>
+<td>19947000</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2021-12-28 00:00:00-05:00</th>
+<td>332.026116</td>
+<td>332.664724</td>
+<td>329.287868</td>
+<td>330.187714</td>
+<td>15661500</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2021-12-29 00:00:00-05:00</th>
+<td>330.236038</td>
+<td>333.138786</td>
+<td>328.668558</td>
+<td>330.864990</td>
+<td>15042000</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2021-12-30 00:00:00-05:00</th>
+<td>330.826257</td>
+<td>332.006709</td>
+<td>327.836430</td>
+<td>328.320221</td>
+<td>15994500</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>251 rows × 7 columns</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../live-notes/module3-day2.html" class="pagination-link" aria-label="Module 3 - Day 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Module 3 - Day 2</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../live-notes/module3-day4.html" class="pagination-link" aria-label="Module 3 - Day 4">
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Module 3 - Day 4</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
