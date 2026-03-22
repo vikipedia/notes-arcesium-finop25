@@ -1,0 +1,97 @@
+# Building cmd applications with typer
+Typer bypasses use of sys.argv or argparse module and lets us create very powerful command line applications.
+
+## Simple example
+
+Here is one sample application and how to pass arguments using typer module
+
+```
+%%file add_typer.py
+import typer
+
+def add(a: int, b: int):
+    return a + b
+
+if __name__ == "__main__":
+    typer.run(add)
+```
+
+```
+$ python add_typer.py --help
+Usage: add_typer.py [OPTIONS] A B                                              
+                                                                                
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    a      INTEGER  [required]                                              │
+│ *    b      INTEGER  [required]                                              │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --help          Show this message and exit.                                  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+```
+
+## Type of argument
+if you give type hints, typer will automatically detect how to convert the command line argument in given type e.g str, int etc.
+
+```
+%%file repeat_typer.py
+import typer
+
+def repeat(text: str, count: int):
+    for i in range(count):
+        print(text)
+
+if __name__ == "__main__":
+    typer.run(repeat)
+```
+
+```
+!python repeat_typer.py welcome 3
+welcome
+welcome
+welcome
+```
+
+## Long short options
+Here is one example where we can give long/short option like `--base/-b`
+
+```
+%%file dummy_typer.py
+from typing import Annotated
+import typer
+import datetime
+
+
+def dummy(target: Annotated[str, typer.Option("--target", "-t", help="Target currency")]="INR", 
+          date: Annotated[str, 
+              typer.Option("--date", "-d", help="Date for which data is requested")]="2023-01-31", 
+          base:Annotated[str, typer.Option("--base", "-b", help="Base currency")]="USD"):
+    print("You gave target as ", target)
+    print("You gave date as ", date)
+    print("You gave base as ", base)
+    print("And this is how you can convert date to iso format")
+    print(datetime.date.fromisoformat(date))
+    
+if __name__ == "__main__":
+    typer.run(dummy)
+```
+
+```
+!python dummy_typer.py --help
+                                                                                
+ Usage: dummy_typer.py [OPTIONS]                                                
+                                                                                
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --target  -t      TEXT  Target currency [default: INR]                       │
+│ --date    -d      TEXT  Date for which data is requested                     │
+│                         [default: 2023-01-31]                                │
+│ --base    -b      TEXT  Base currency [default: USD]                         │
+│ --help                  Show this message and exit.                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+
+!python dummy_typer.py -t BITC -d "2026-01-23" -b EUR
+You gave target as  BITC
+You gave date as  2026-01-23
+You gave base as  EUR
+And this is how you can convert date to iso format
+2026-01-23
+```

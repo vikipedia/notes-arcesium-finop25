@@ -1,0 +1,51 @@
+project:
+  type: book
+
+book:
+  title: "Arcesium Finop Python Training"
+  author: "Vikrant Patil"
+  date: "12/9/2025"
+  chapters:
+    - index.qmd
+    - syllabus.qmd
+    - intro.qmd
+    - functions.qmd
+    - loops.qmd
+    - modules.qmd
+    - comprehensions.qmd
+    - part: Live Notes
+      href: live-notes/index.qmd
+      chapters:
+        - live-notes/module1-day1.ipynb
+        - live-notes/module1-day2.ipynb
+        - live-notes/module1-day3.ipynb
+        - live-notes/module1-day4.ipynb
+        - live-notes/module1-day5.ipynb
+        - live-notes/nurturing-session1.ipynb
+        - live-notes/module2-day1.ipynb
+        - live-notes/module2-day2.ipynb
+        - live-notes/module2-day3.ipynb
+        - live-notes/module2-day4.ipynb
+        - live-notes/module2-day5.ipynb
+        - live-notes/nurturing-session2.ipynb
+        - live-notes/module3-day1.ipynb
+        - live-notes/module3-day2.ipynb
+        - live-notes/module3-day3.ipynb
+        - live-notes/module3-day4.ipynb
+        - live-notes/module3-day5.ipynb
+        - live-notes/nurturing-session3.ipynb
+    - cookbook-date.qmd
+    - cookbook-tabulate.qmd
+    - cookbook-typer.qmd
+    - references.qmd
+    - training-setup.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+
+

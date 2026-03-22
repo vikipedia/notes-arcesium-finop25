@@ -1,0 +1,106 @@
+# Syllabus {.unnumbered}
+
+Syllabus and division of training material as given below, module wise and day wise.
+
+## Module I
+
+### Day1 - 3 Hours
+- Working with python - installing, executing and basic controlling of the environment.
+- Numeric and Text data
+- Concept of variable, assignment operator
+- Collections - lists, tuples.
+- list slicing
+- Some built ins (sum, min, max)
+
+### Day2 - 2.5 Hours
+- More built in functions
+- Useful methods of strings and lists
+- Creating custom functions
+- A function with return and without return
+
+### Day3 - 2.5 Hours
+
+- Passing functions as arguments
+- Functions returning functions
+- Introduction to Programming constructs - conditions, loops
+
+### Day4 - 3 hours
+- Python modules - some built in modules os, sys
+- Writing your own modules
+- Distinguishing modules and scripts
+
+### Day5 - 2.5 hours
+- Putting it all together
+- Building command line applications using typer/click
+- Assignments - introduction
+
+
+## Module II
+
+### Day1 - 3 hours
+- Iteration patterns
+- list comprehensions
+- Mapping one list to another list
+- Filtering lists on some conditions
+
+### Day2 - 2.5 hours
+- Reading text files
+- Writing to text files
+- String formatting
+
+### Day3 - 2 hours
+- Why classes?
+- How to write classes in python
+- Inheritance
+- Examples on OOPS
+
+### Day4 - 2 hours
+- Working with Dictionaries
+- Pitfalls related objects referencing
+- Some useful patterns
+
+### Day5 - 2 hours
+- Working with CSV files
+- Using built in module to read and write CSV file
+- Reading/Writing Excel Files with xlsxwriter
+- Writing in excel , formatting fonts, formulas etc.
+- Excel tables - add_table,
+- Collapsed outline and grouping - set_row
+- Panes - freeze panes
+
+
+## Module III
+
+### Day1 - 3 hours
+- Operating on tabular data using pandas
+- Series, Dataframe
+- Access patterns , selecting
+- Filtering
+- Merging, joining, concatenating
+- Groupby
+- Reading/writing datasets using pandas
+
+### Day2 - 2 hours
+- Using third party libraries (installing, accessing , managing etc.)
+- Managing virtual environments
+
+### Day3 - 2.5 hours
+- Fetching data from internet/intranet
+- With requests module get/post APIs
+- Operating with json data
+- json to python data
+- python to json data examples
+
+### Day4 - 2 hours
+- Connecting to databases (sqlite3 )
+- database connectors
+- connecting and executing queries
+- Pitfalls in reading/writing to databases.
+
+### Day5 - 2 hours
+- Debugging python programs
+- Tips for debugging, looking at trace, error messages to find faults
+- debugging with pdb, sample session
+- Distributing libraries and packages.
+- One sample example of creating a python package
+- standalone script with dependencies library and usable script

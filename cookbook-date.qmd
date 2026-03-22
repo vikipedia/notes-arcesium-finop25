@@ -1,0 +1,127 @@
+
+# Working with Dates
+
+Python has a `datetime` module to work with date, time and datetimes. This recipe focuses only on working with dates.
+
+We start with importing the datetime module.
+
+```
+import datetime
+```
+
+For all the examples below, please assume that datetime is already imported.
+
+## Common Operations
+
+Creating a date:
+
+```
+>>> datetime.date(2020, 10, 20)
+
+datetime.date(2020, 10, 20)
+```
+
+Today’s date:
+
+```
+>>> datetime.date.today()
+
+datetime.date(2024, 5, 16)
+```
+
+Accessing year, month and day.
+
+```
+>>> d = datetime.date(2020, 10, 20)
+>>> print(d.year, d.month, d.day)
+2020 10 20
+```
+
+Parsing a date:
+
+```
+>>> datetime.date.fromisoformat("2020-02-26")
+
+datetime.date(2020, 2, 26)
+```
+
+## Date Arithmatic
+
+The datetime module has timedelta to add or subtract dates.
+
+The date of yesterday:
+
+```
+>>> datetime.date.today() - datetime.timedelta(days=1)
+
+datetime.date(2024, 5, 15)
+```
+
+10 days from 2020-02-25:
+
+```
+>>> date = datetime.date(2020, 2, 25)
+>>> for i in range(10):
+....    d = date + datetime.timedelta(days=i)
+....    print(d)
+
+2020-02-25
+2020-02-26
+2020-02-27
+2020-02-28
+2020-02-29
+2020-03-01
+2020-03-02
+2020-03-03
+2020-03-04
+2020-03-05
+```
+
+Or the same thing as a list comprehension:
+
+```
+def date_range(start_date, ndays):
+    return [start_date + datetime.timedelta(days=i) for i in range(ndays)]
+
+date = datetime.date(2020, 2, 25)
+date_range(date, 10)
+
+[datetime.date(2020, 2, 25),
+ datetime.date(2020, 2, 26),
+ datetime.date(2020, 2, 27),
+ datetime.date(2020, 2, 28),
+ datetime.date(2020, 2, 29),
+ datetime.date(2020, 3, 1),
+ datetime.date(2020, 3, 2),
+ datetime.date(2020, 3, 3),
+ datetime.date(2020, 3, 4),
+ datetime.date(2020, 3, 5)]
+```
+
+## Formatting Dates
+
+To format the date in YYYY-MM-DD format, we could just convert the date into string or use isoformat method.
+
+```
+d = datetime.date(2020, 2, 25)
+print(d)
+print(str(d))
+print(d.isoformat())
+
+2020-02-25
+2020-02-25
+2020-02-25
+```
+
+The strftime method provides a flexible way to format a date.
+
+```
+d = datetime.date(2020, 2, 25)
+print(d.strftime("%Y-%m-%d"))
+print(d.strftime("%a %b %d, %Y"))
+
+2020-02-25
+Tue Feb 25, 2020
+```
+
+Please refer to [strftime.org](https://strftime.org/) to know the for the availble options.

@@ -1,0 +1,21 @@
+
+# Welcome {.unnumbered}
+
+Welcome to the Arcesium Finop Python Training
+
+Arcesum Finop Python Training is a hands-on training to learn the essentials of the Python programming language, understand the best practices and idioms of the language. It is designed for learners with no programming background. 
+
+## The Lab Setup
+
+A jupyterhub instance is in the cloud is setup for this training which provides a jupyter lab instance for every participant.
+
+You can access it from <https://lab.finop-25.arcesium.vikrant.dev/>.
+
+login credentials are shared with you through separate communication.
+
+## Live Notes
+
+The live trianing notes presented by the instuctor will be available live at <https://finop-25.arcesium.vikrant.dev/>.
+
+You can use this to browse through the notes if you need to refer to a concept covered a few minutes ago, or look the codes examples covered earlier.
+

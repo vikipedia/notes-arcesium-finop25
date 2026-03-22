@@ -1,0 +1,37 @@
+# Training Setup {.unnumbered}
+
+::: {.callout-note}
+These are instructions for setting of this training infrastructure, meant for the trainer.
+
+Students can ignore this chapter.
+:::
+
+## Step 1: Launch a VM
+
+Launch a virtual machine with required confuguration.
+
+## Step 2: Configure DNS
+
+Configure DNS with the following domains pointing to the IP address of the VM.
+
+```
+arcesium.vikrant.dev
+lab.arcesium.vikrant.dev
+```
+
+## Step 3: Clone the repo
+
+```
+git clone git@github.com:vikipedia/arcesium-finop-25.git
+cd arcesium-finop-25
+git submodule init
+git submodule update
+```
+
+## Step 4: Run the setup script
+
+```
+./scripts/setup-node.sh
+```
+
+This will install everything needed. See the script file for more details.
